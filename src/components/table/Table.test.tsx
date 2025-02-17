@@ -61,4 +61,3 @@ describe("UserTableComponent", () => {
     expect(screen.getAllByRole("row")).toHaveLength(2);
   });
 });
-
