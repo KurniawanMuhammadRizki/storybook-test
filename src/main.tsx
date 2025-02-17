@@ -6,7 +6,7 @@ import { Provider } from "@/components/ui/provider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Provider>
+    <Provider themes={["light", "dark"]} defaultTheme="light">
       <App />
     </Provider>
   </StrictMode>

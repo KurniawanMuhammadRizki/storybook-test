@@ -7,11 +7,12 @@ export default {
   component: UserTable,
   decorators: [
     (Story) => (
-      <Provider>
+      <Provider themes={["light", "dark"]} defaultTheme="light">
         <Story />
       </Provider>
     ),
   ],
+  backgrounds: { disable: true },
 } as Meta;
 
 export const UserTableComponent: StoryObj<typeof UserTable> = {
