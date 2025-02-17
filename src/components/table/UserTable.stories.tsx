@@ -3,7 +3,7 @@ import { UserTable } from "./UserTable";
 import { Provider } from "../ui/provider";
 
 export default {
-  title: "Components/Table",
+  title: "Components/Table/UserTable",
   component: UserTable,
   decorators: [
     (Story) => (
@@ -15,7 +15,7 @@ export default {
   backgrounds: { disable: true },
 } as Meta;
 
-export const UserTableComponent: StoryObj<typeof UserTable> = {
+export const Default: StoryObj<typeof UserTable> = {
   args: {
     data: [
       {

@@ -3,7 +3,7 @@ import { ActionButton } from "./ActionButton";
 import { Provider } from "../ui/provider";
 
 export default {
-  title: "Components/ActionButton",
+  title: "Components/Buttons/ActionButton",
   component: ActionButton,
   decorators: [
     (Story) => (
