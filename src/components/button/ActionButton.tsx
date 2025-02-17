@@ -1,14 +1,16 @@
 import { IconButton } from "@chakra-ui/react";
-import { CgMoreVertical } from "react-icons/cg";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 
 interface ActionButtonProps {
   onClick?: () => void;
 }
+
 export const ActionButton: React.FC<ActionButtonProps> = ({ onClick }) => {
   return (
     <IconButton
-      aria-label="More options"
-      asChild={true}
+      aria-label="actions"
+      role="button"
+      as="button"
       width="32px"
       height="32px"
       background="transparent"
@@ -16,7 +18,7 @@ export const ActionButton: React.FC<ActionButtonProps> = ({ onClick }) => {
       _active={{ background: "gray.200" }}
       _focus={{ boxShadow: "none" }}
       onClick={onClick}>
-      <CgMoreVertical size={20} />
+      <HiOutlineDotsVertical size={20} color="black" />
     </IconButton>
   );
 };

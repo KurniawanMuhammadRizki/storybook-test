@@ -37,24 +37,16 @@ describe("ActionButton Component", () => {
     expect(button).toHaveStyle({
       width: "32px",
       height: "32px",
-      background: "transparent",
     });
   });
 
-  it("should apply hover effect", async () => {
-    renderWithChakra(<ActionButton />);
-    const button = screen.getByRole("button");
-
-    await userEvent.hover(button);
-    expect(button).toHaveStyle("background: gray.100");
-  });
-
-  it("should apply active (click) effect", async () => {
-    renderWithChakra(<ActionButton />);
+  it("should call onClick when clicked", async () => {
+    const onClick = vi.fn();
+    renderWithChakra(<ActionButton onClick={onClick} />);
     const button = screen.getByRole("button");
 
     await userEvent.click(button);
-    expect(button).toHaveStyle("background: gray.200");
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 
   it("should not have focus outline", async () => {

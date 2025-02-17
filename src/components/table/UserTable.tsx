@@ -1,5 +1,6 @@
 import { Table, Tag, TagLabel } from "@chakra-ui/react";
 import { UserData } from "./types";
+import { ActionButton } from "../button/ActionButton";
 
 interface UserTableProps {
   data: UserData[];
@@ -68,7 +69,7 @@ export const UserTable: React.FC<UserTableProps> = ({ data }) => {
               </Tag.Root>
             </Table.Cell>
             <Table.Cell textAlign="center" padding="26px 12px">
-              action btn
+              <ActionButton />
             </Table.Cell>
           </Table.Row>
         ))}
