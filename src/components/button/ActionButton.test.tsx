@@ -21,7 +21,11 @@ Object.defineProperty(window, "matchMedia", {
 });
 
 const renderWithChakra = (component: React.ReactElement) => {
-  return render(<Provider>{component}</Provider>);
+  return render(
+    <Provider themes={["light", "dark"]} defaultTheme="light">
+      {component}
+    </Provider>
+  );
 };
 
 describe("ActionButton Component", () => {
