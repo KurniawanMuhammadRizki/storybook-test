@@ -1,7 +1,23 @@
 import "./App.css";
+import { UserData } from "./components/table/types";
+import { UserTable } from "./components/table/UserTable";
 
 function App() {
-  return <></>;
+  const data: UserData[] = [
+    {
+      name: "Emma Thompson",
+      email: "emma.thompson@email.com",
+      role: "Primary Admin",
+    },
+    { name: "Liam Carter", email: "liam.carter@email.com", role: "Co-Admin" },
+    { name: "Olivia Kim", email: "oliviakim@email.com", role: "Marketing" },
+  ];
+
+  return (
+    <>
+      <UserTable data={data} />
+    </>
+  );
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import { Table } from "@chakra-ui/react";
-import { UserData } from "./Types";
+import { UserData } from "./types";
 
 interface UserTableProps {
   data: UserData[];
