@@ -7,7 +7,7 @@ export default {
   component: ActionButton,
   decorators: [
     (Story) => (
-      <Provider>
+      <Provider themes={["light", "dark"]} defaultTheme="light">
         <Story />
       </Provider>
     ),
