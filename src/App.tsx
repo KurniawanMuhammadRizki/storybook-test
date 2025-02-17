@@ -1,3 +1,4 @@
+import { Theme } from "@chakra-ui/react";
 import "./App.css";
 import { UserData } from "./components/table/types";
 import { UserTable } from "./components/table/UserTable";
@@ -15,7 +16,9 @@ function App() {
 
   return (
     <>
-      <UserTable data={data} />
+      <Theme p="4" appearance="light" colorPalette="teal">
+        <UserTable data={data} />
+      </Theme>
     </>
   );
 }
