@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Theme } from "@chakra-ui/react";
+import "./App.css";
+import { UserData } from "./components/table/types";
+import { UserTable } from "./components/table/UserTable";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const data: UserData[] = [
+    {
+      name: "Emma Thompson",
+      email: "emma.thompson@email.com",
+      role: "Primary Admin",
+    },
+    { name: "Liam Carter", email: "liam.carter@email.com", role: "Co-Admin" },
+    { name: "Olivia Kim", email: "oliviakim@email.com", role: "Marketing" },
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Theme p="4" appearance="light" colorPalette="teal">
+        <UserTable data={data} />
+      </Theme>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
